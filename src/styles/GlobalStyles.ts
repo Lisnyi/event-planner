@@ -1,7 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
-import { PoppinsMedium, PoppinsSemiBold, PoppinsRegular, AlataRegular } from '../assets';
+import { PoppinsMedium, PoppinsSemiBold, PoppinsRegular, PoppinsLight, AlataRegular } from '../assets';
  
 export const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: "PoppinsLight";
+        src: local("PoppinsLight"),
+            url(${PoppinsLight}) format("truetype");
+    }
+
     @font-face {
         font-family: "PoppinsMedium";
         src: local("PoppinsMedium"),
@@ -39,5 +45,9 @@ export const GlobalStyle = createGlobalStyle`
     h4,
     p {
         margin: 0;
+    }
+
+    input {
+        box-sizing: border-box;
     }
 `
