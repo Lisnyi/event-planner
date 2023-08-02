@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { PoppinsMedium, PoppinsSemiBold, PoppinsRegular } from '../assets';
+import { PoppinsMedium, PoppinsSemiBold, PoppinsRegular, AlataRegular } from '../assets';
  
 export const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -13,10 +13,17 @@ export const GlobalStyle = createGlobalStyle`
         src: local("PoppinsSemiBold"),
             url(${PoppinsSemiBold}) format("truetype");
     }
+
     @font-face {
         font-family: "PoppinsRegular";
         src: local("PoppinsRegular"),
             url(${PoppinsRegular}) format("truetype");
+    }
+
+    @font-face {
+        font-family: "AlataRegular";
+        src: local("AlataRegular"),
+            url(${AlataRegular}) format("truetype");
     }
 
     body {

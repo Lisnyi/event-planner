@@ -11,6 +11,7 @@ export const theme = {
     fontSizes: {
         regular: "14px",
         medium: "16px",
+        semiLarge: "24px",
         large: "32px"
     }
 }
