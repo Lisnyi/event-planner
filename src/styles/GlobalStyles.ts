@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: 'PoppinsRegular', sans-serif;
-        font-size: ${p => p.theme.fontSizes.regular}
+        font-size: 14px;
     }
 
     h1,
