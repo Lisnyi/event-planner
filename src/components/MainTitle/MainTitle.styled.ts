@@ -5,4 +5,8 @@ export const Title = styled.a`
     font-size: ${p => p.theme.fontSizes.semiLarge};
     color: ${p => p.theme.colors.blue};
     cursor: pointer;
+
+    &:hover {
+        color: ${p => p.theme.colors.accentBlue};
+    }
 `
