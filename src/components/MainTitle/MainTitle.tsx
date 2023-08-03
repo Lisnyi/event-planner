@@ -6,9 +6,9 @@ type Props = {
 }
 
 export const MainTitle: FC<Props> = ({title}) => {
-  return (
-    <Title>
-        {title}
-    </Title>
-  )
+    return (
+        <Title>
+            {title}
+        </Title>
+    )
 }
