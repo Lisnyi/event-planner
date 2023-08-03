@@ -1,14 +1,15 @@
 import { ThemeProvider } from 'styled-components'
+import { Header, Container } from './components'
 import { GlobalStyle, theme } from './styles'
-import './assets/Fonts/Poppins/Poppins-Medium.ttf'
-import'./assets/Fonts/Poppins/Poppins-SemiBold.ttf'
-import './assets/Fonts/Poppins/Poppins-Regular.ttf'
 
 function App() {
 
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle/>
+            <Container>
+                <Header/>
+            </Container>
         </ThemeProvider>
     )
 }
