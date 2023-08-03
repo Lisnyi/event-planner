@@ -1,6 +1,6 @@
 import { ElementType } from "react";
 import styled from "styled-components"
-import SvgIcon from '@mui/material/SvgIcon';
+import { SvgIcon } from '@mui/material';
 
 export const FilterBox = styled.div`
     position: relative;
