@@ -13,7 +13,7 @@ export const LangSelect = styled(InputBase)`
         display: inline-flex;
         justify-content: flex-start;
         padding: 0;
-        font-size: 16px;
+        font-size: ${p => p.theme.fontSizes.medium};
         font-family: 'PoppinsMedium', sans-serif;
         color: ${p => p.theme.colors.black};
     }
@@ -42,7 +42,7 @@ export const useStyles = makeStyles<{ theme: DefaultTheme }>()(
                 padding: 0,
                 paddingBottom: "4px",
                 borderBottom: `1px solid ${theme.colors.grey}`,
-                fontSize: "16px",
+                fontSize: theme.fontSizes.medium,
                 lineHeight: "20px",
                 fontFamily: "PoppinsMedium, sans-serif",
                 color: theme.colors.grey,

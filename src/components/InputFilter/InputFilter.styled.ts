@@ -16,7 +16,7 @@ export const Filter = styled.input`
     border-radius: 10px;
     box-shadow: 2px 4px 9px 0px rgba(166, 141, 174, 0.28);
     font-family: 'PoppinsRegular', sans-serif;
-    font-size: 14px;
+    font-size: ${p => p.theme.fontSizes.regular};
     line-height: 14px;
     color: ${p => p.theme.colors.blue};
 
