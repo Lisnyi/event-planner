@@ -14,5 +14,9 @@ export const theme = {
         medium: "16px",
         semiLarge: "24px",
         large: "32px"
+    },
+    shadow: {
+        main: "2px 4px 9px 0px rgba(166, 141, 174, 0.28)",
+        select: "0px 4px 10px 0px rgba(0, 0, 0, 0.25)"
     }
 }
