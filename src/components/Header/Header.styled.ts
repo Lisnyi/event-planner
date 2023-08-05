@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderBox = styled.div`
+export const HeaderBox = styled.header`
     padding: 24px;
     border-bottom: 1px solid ${p => p.theme.colors.blue};
 `
