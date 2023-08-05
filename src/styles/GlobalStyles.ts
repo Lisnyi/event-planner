@@ -33,6 +33,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        min-height: 100vh;
         margin: 0;
         padding: 0;
         font-family: 'PoppinsRegular', sans-serif;

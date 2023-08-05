@@ -1,16 +1,9 @@
-import { ThemeProvider } from 'styled-components'
-import { Header, Container } from './components'
-import { GlobalStyle, theme } from './styles'
+import { UserRoutes } from './components'
 
 function App() {
 
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle/>
-            <Container>
-                <Header/>
-            </Container>
-        </ThemeProvider>
+        <UserRoutes/>
     )
 }
 
