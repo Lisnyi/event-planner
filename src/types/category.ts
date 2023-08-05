@@ -1,0 +1,1 @@
+export type Category = 'Art' | 'Music' | 'Business' | 'Conference' | 'Worhshop' | 'Party' | 'Sport'
