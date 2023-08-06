@@ -26,7 +26,7 @@ export const EventCard: FC<Props> = ({event}) => {
         <Card onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <ImageBox isHover={isHover}>
                 <CardChipsStack category='Art' priority='Low'/>
-                <EventImage src={Cartinka} alt='asd'/>
+                <EventImage src={Cartinka} alt='Event image'/>
                 <EventInfo>
                     <p>
                         12.07 at 12:00
