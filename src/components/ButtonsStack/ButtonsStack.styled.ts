@@ -6,5 +6,5 @@ export const Box = styled.div`
     align-items: center;
     position: relative;
     gap: 24px;
-    padding: 24px;
+    margin-bottom: 40px;
 `
