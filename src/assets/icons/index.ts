@@ -6,6 +6,7 @@ import { ReactComponent as Filter } from './filter.svg'
 import { ReactComponent as Sort } from './sort.svg'
 import { ReactComponent as SortArrowDown } from './arrow-down-sort.svg'
 import { ReactComponent as SortArrowUp } from './arrow-up-sort.svg'
+import { ReactComponent as ArrowLeft } from './arrow-left.svg'
 
 export {
     Cross,
@@ -15,5 +16,6 @@ export {
     Filter,
     Sort,
     SortArrowDown,
-    SortArrowUp
+    SortArrowUp,
+    ArrowLeft
 }
