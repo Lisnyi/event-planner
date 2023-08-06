@@ -5,8 +5,8 @@ export const OpenButton = styled(Button)<{ open: boolean }>`
 
     &.MuiButton-root {
         position: ${p => p.open ? 'absolute' : 'static'};
-        top: 24px;
-        right: 24px;
+        top: 0;
+        right: 80px;
         min-width: 56px;
         width: ${p => p.open ? '170px' : '56px'};
         height: 56px;
