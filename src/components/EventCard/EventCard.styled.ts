@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const Card = styled.div`
     display: block;
-    width: 302px;
+    width: 271px;
     border-radius: 12px;
     box-shadow: ${p => p.theme.shadow.main};
 `
 
-export const ImageBox = styled.div`
+export const ImageBox = styled.div<{isHover: boolean}>`
     width: 100%;
-    height: 336px;
+    height: ${p => p.isHover ? '288px' : '336px'};
     position: relative;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -40,6 +40,7 @@ export const EventInfo = styled.div`
 
 export const DescriptionBox = styled.div`
     padding: 16px;
+    background-color: white;
 `
 
 export const DescriptionTitle = styled.h3`
@@ -49,6 +50,13 @@ export const DescriptionTitle = styled.h3`
     line-height: 24px;
 `
 
-export const DescriptionText = styled.p`
+export const DescriptionText = styled.p<{isHover: boolean}>`
     line-height: 20px;
+    margin-bottom: ${p => p.isHover && '8px'};
+`
+
+export const ButtonsBox = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 `
