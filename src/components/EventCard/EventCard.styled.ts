@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-    display: block;
     width: 271px;
     border-radius: 12px;
+    background-color: white;
     box-shadow: ${p => p.theme.shadow.main};
 `
 
@@ -40,7 +40,6 @@ export const EventInfo = styled.div`
 
 export const DescriptionBox = styled.div`
     padding: 16px;
-    background-color: white;
 `
 
 export const DescriptionTitle = styled.h3`
