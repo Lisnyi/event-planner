@@ -11,12 +11,16 @@ export const CustomInput = styled(Input)`
             box-sizing: border-box;
             height: 56px;
             padding: 16px 36px 16px 12px;
-            border: 1px solid ${p => p.theme.colors.blue};
+            border: 1px solid ${p => p.theme.colors.grey};
             border-radius: 8px;
             background-color: white;
             font-family: 'PoppinsRegular', sans-serif;
             font-size: 16px;
             line-height: 24px;
+
+            &:hover, &:focus {
+                border-color: ${p => p.theme.colors.accentBlue};
+            }
         }
 
         &.Mui-error .MuiInput-input{

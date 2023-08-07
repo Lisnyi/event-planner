@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { useFormikContext, useField } from 'formik'
 import { FormControlBox, Label, ClearButton, ErrorMessage } from '../../..'
 import { CustomInput } from './Input.styled'
-import type { Values } from '../../../../types'
+import type { CreateEventFormValues } from '../../../../types'
 
 type Props = {
 	id: string,
@@ -12,11 +12,11 @@ type Props = {
 
 export const Input: FC<Props> = ({id, name, label, ...rest}) => {
 
-	const { values, errors, touched, handleChange, handleBlur } = useFormikContext<Values>();
+	const { values, errors, touched, handleChange, handleBlur } = useFormikContext<CreateEventFormValues>();
 
 	const [, {initialValue, initialTouched, initialError}, {setValue, setError, setTouched}] = useField(name);
-	const errorMessage = touched[name as keyof Values] && errors[name as keyof Values]
-	const error = touched[name as keyof Values] && Boolean(errors[name as keyof Values])
+	const errorMessage = touched[name as keyof CreateEventFormValues] && errors[name as keyof CreateEventFormValues]
+	const error = touched[name as keyof CreateEventFormValues] && Boolean(errors[name as keyof CreateEventFormValues])
 
 	function clearField () {
 		setValue(initialValue, false)
@@ -28,12 +28,12 @@ export const Input: FC<Props> = ({id, name, label, ...rest}) => {
 		<FormControlBox>
 			<Label htmlFor={id} label={label}/>
 			<CustomInput
-				endAdornment={values[name as keyof Values] && <ClearButton handleClick={clearField}/>}
+				endAdornment={values[name as keyof CreateEventFormValues] && <ClearButton handleClick={clearField}/>}
 				disableUnderline
 				fullWidth
 				id={id}
 				name={name}
-				value={values[name as keyof Values]}
+				value={values[name as keyof CreateEventFormValues]}
 				onChange={handleChange}
 				onBlur={handleBlur}
 				error={error}
