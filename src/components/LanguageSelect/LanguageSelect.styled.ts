@@ -1,7 +1,6 @@
-import styled from "styled-components"
+import styled, { DefaultTheme } from "styled-components"
 import { makeStyles } from 'tss-react/mui'
 import { InputBase } from '@mui/material';
-import { DefaultTheme } from "styled-components";
 
 export const LangSelect = styled(InputBase)`
     width: 69px;
