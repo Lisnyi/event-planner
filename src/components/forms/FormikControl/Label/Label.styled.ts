@@ -12,5 +12,6 @@ export const CustomLabel = styled(InputLabel)`
         line-height: 16px;
         letter-spacing: 0.4px;
         margin-bottom: 8px;
+        z-index: 0;
     }
 `
