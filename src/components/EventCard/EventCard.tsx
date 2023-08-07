@@ -1,4 +1,5 @@
 import { FC, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { CardChipsStack, MoreInfoButton } from '..'
 import { Card, ImageBox, DescriptionBox, DescriptionTitle, DescriptionText, EventImage, EventInfo, ButtonsBox } from "./EventCard.styled"
 import Cartinka from '../../assets/images/Rectangle 347.png'
@@ -11,8 +12,12 @@ type Props = {
 export const EventCard: FC<Props> = ({event}) => {
     
     const [isHover, setIsHover] = useState(false)
+    const navigate = useNavigate()
     // const { title, date, description, time, location, category, picture, priority  } = event
 
+    function goToEventInfo() {
+        navigate("/event-info")
+    }
 
     function handleMouseEnter() {
         setIsHover(true);
@@ -44,7 +49,7 @@ export const EventCard: FC<Props> = ({event}) => {
                     Unlock the secrets of effective leadership at our transformative Success Leadership Conference.
                 </DescriptionText>
                 {isHover && <ButtonsBox>
-                                <MoreInfoButton handleClick={() => console.log('click')}/>
+                                <MoreInfoButton handleClick={goToEventInfo}/>
                             </ButtonsBox>                
                 }
             </DescriptionBox>
