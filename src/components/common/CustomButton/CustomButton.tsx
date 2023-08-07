@@ -3,7 +3,7 @@ import { Button } from './CustomButton.styled'
 
 type Props = {
     content: string,
-    handleClick: MouseEventHandler<HTMLButtonElement>,
+    handleClick?: MouseEventHandler<HTMLButtonElement>,
     type?: "button" | "submit" | "reset",
     className?: string,
 }
