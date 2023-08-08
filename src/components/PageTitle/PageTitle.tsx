@@ -3,11 +3,12 @@ import { Title } from './PageTitle.styled'
 
 type Props = {
     content: string,
+    homePage?: boolean | undefined
 }
 
-export const PageTitle: FC<Props> = ({content}) => {
+export const PageTitle: FC<Props> = ({content, homePage}) => {
   return (
-    <Title>
+    <Title homePage={homePage}>
         {content}
     </Title>
   )

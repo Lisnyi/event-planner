@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Container, Section, ButtonsStack, MainEventsList } from '../components'
+import { Container, Section, MainEventsList, HomePageBox} from '../components'
 import { useGetEventsQuery } from '../redux'
 
 const HomePage: FC = () => {
@@ -9,7 +9,7 @@ const HomePage: FC = () => {
     return (
         <Container>
             <Section>
-                <ButtonsStack/>
+                <HomePageBox/>
                 {data && <MainEventsList list={data}/>}
             </Section>
         </Container>

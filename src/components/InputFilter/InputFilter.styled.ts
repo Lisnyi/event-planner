@@ -25,6 +25,14 @@ export const Filter = styled.input`
         line-height: 14px;
         color: ${p => p.theme.colors.placeholder};
     }
+
+    @media (min-width: 768px) {
+       width: 368px;
+    }
+
+    @media (min-width: 768px) {
+       width: 410px;
+    }
 `
 
 export const SearchIcon = styled(SvgIcon)<{component: ElementType}>`

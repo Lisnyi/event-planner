@@ -6,5 +6,12 @@ export const Box = styled.div`
     align-items: center;
     position: relative;
     gap: 24px;
-    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 24px;
+    }
+
+    @media (min-width: 1440px) {
+        margin-bottom: 0;
+    }
 `

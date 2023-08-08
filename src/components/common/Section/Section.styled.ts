@@ -1,12 +1,18 @@
 import styled from "styled-components";
-import bg from '../../../assets/images/bg.jpg'
 
 export const Box = styled.section`
-    width: 100%;
-    min-height: calc(100vh - 168px);
-    padding: 42px 24px;
-    background-image: url(${bg});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 100%;
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    @media (min-width: 768px) {
+        width: 768px;
+        padding: 0 40px;
+    }
+
+    @media (min-width: 1440px) {
+        width: 1440px;
+        padding: 0 80px;
+    }
 `
