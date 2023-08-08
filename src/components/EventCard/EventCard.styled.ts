@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const Card = styled.div`
-    width: 271px;
+export const Card = styled.li`
+    width: 100%;
     border-radius: 12px;
     background-color: white;
     box-shadow: ${p => p.theme.shadow.main};
