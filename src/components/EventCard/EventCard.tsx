@@ -1,22 +1,27 @@
 import { FC, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import * as dayjs from 'dayjs'
 import { CardChipsStack, MoreInfoButton } from '..'
 import { Card, ImageBox, DescriptionBox, DescriptionTitle, DescriptionText, EventImage, EventInfo, ButtonsBox } from "./EventCard.styled"
-import Cartinka from '../../assets/images/Rectangle 347.png'
+import { DefaultImage } from '../../assets'
 import type { Event } from '../../types'
 
 type Props = {
-    event?: Event
+    event: Event
 }
 
 export const EventCard: FC<Props> = ({event}) => {
     
+    const { id, title, date, description, time, location, category, picture, priority  } = event
+
     const [isHover, setIsHover] = useState(false)
     const navigate = useNavigate()
-    // const { title, date, description, time, location, category, picture, priority  } = event
+
+    const dateFormat = dayjs(date).format("DD.MM")
+    const timeFormat =  dayjs(time).format("HH:mm")
 
     function goToEventInfo() {
-        navigate("/event-info")
+        navigate(`/event-info/${id}`)
     }
 
     function handleMouseEnter() {
@@ -30,23 +35,23 @@ export const EventCard: FC<Props> = ({event}) => {
     return (
         <Card onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <ImageBox isHover={isHover}>
-                <CardChipsStack category='Art' priority='Low'/>
-                <EventImage src={Cartinka} alt='Event image'/>
+                <CardChipsStack category={category} priority={priority}/>
+                <EventImage src={picture ? picture : DefaultImage} alt='Event image'/>
                 <EventInfo>
                     <p>
-                        12.07 at 12:00
+                        {dateFormat} at {timeFormat}
                     </p>
                     <p>
-                        Kyiv
+                        {location}
                     </p>
                 </EventInfo>
             </ImageBox>
             <DescriptionBox>
                 <DescriptionTitle>
-                    Leadership Conference
+                    {title}
                 </DescriptionTitle>
                 <DescriptionText isHover={isHover}>
-                    Unlock the secrets of effective leadership at our transformative Success Leadership Conference.
+                    {description}
                 </DescriptionText>
                 {isHover && <ButtonsBox>
                                 <MoreInfoButton handleClick={goToEventInfo}/>
