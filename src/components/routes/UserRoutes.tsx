@@ -14,8 +14,8 @@ export const UserRoutes = () => {
             <Route path="/" element={<SharedLayout/>}>
                 <Route index element={<HomePage/>}/>
                 <Route path="/create-event" element={<CreateEventPage/>}/>
-                <Route path="/edit-event" element={<EditEventPage/>}/>
-                <Route path="/event-info" element={<EventInfoPage/>}/>
+                <Route path="/edit-event/:eventId" element={<EditEventPage/>}/>
+                <Route path="/event-info/:eventId" element={<EventInfoPage/>}/>
                 <Route path="*" element={<NotFoundPage/>}/>
             </Route>
         </Routes>
