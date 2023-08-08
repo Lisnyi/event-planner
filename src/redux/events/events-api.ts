@@ -84,10 +84,10 @@ export const eventsApi = createApi({
             },
             invalidatesTags: ['Events'],
         }),
-        updateEvent: builder.mutation({
-            async queryFn( eventId, updatedEvent ) {
+        updateEvent: builder.mutation<{data: null} | void, {id: string, event: NewEvent}>({
+            async queryFn( arg ) {
                 try {
-                    await setDoc(doc(firestore, 'events', eventId), updatedEvent);
+                    await setDoc(doc(firestore, 'events', arg.id), arg.event);
                     return { data: null };
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 } catch (e: any) {
