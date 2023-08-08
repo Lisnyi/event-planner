@@ -1,1 +1,5 @@
-export type Category = 'Art' | 'Music' | 'Business' | 'Conference' | 'Worhshop' | 'Party' | 'Sport'
+export type Category = 'Art' | 'Music' | 'Business' | 'Conference' | 'Workshop' | 'Party' | 'Sport'
+
+export type CategoryObj = {
+	value: Category
+}
