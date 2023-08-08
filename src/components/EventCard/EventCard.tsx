@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import { CardChipsStack, MoreInfoButton } from '..'
 import { Card, ImageBox, DescriptionBox, DescriptionTitle, DescriptionText, EventImage, EventInfo, ButtonsBox } from "./EventCard.styled"
 import { DefaultImage } from '../../assets'

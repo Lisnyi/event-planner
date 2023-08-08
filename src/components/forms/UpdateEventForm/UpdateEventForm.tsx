@@ -2,7 +2,7 @@ import { FC, useMemo } from "react"
 import { useNavigate } from 'react-router-dom'
 import { nanoid } from "nanoid"
 import { Formik, FormikHelpers } from "formik"
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import { priority, categories } from "../../../db"
 import { useUpdateEventMutation } from "../../../redux"
 import { FormikControl, updateEventSchema } from ".."

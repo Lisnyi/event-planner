@@ -27,7 +27,7 @@ export const Input: FC<Props> = ({id, name, label, disabled, ...rest}) => {
 
 	return (
 		<FormControlBox>
-			<Label htmlFor={id} label={label}/>
+			<Label htmlFor={id} label={label} disabled={disabled}/>
 			<CustomInput
 				endAdornment={values[name as keyof CreateEventFormValues] && <ClearButton handleClick={clearField}/>}
 				disableUnderline

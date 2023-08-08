@@ -3,7 +3,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { useField, useFormikContext } from "formik";
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import { FormControlBox, Label, ErrorMessage } from '..';
 import type { CreateEventFormValues } from '../../../../types';
 

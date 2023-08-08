@@ -27,6 +27,10 @@ export const CustomInput = styled(Input)`
             border-color: ${p => p.theme.colors.red};
         }
 
+        &.Mui-disabled .MuiInput-input{
+            border-color: ${p => p.theme.colors.grey};
+        }
+
         button {
             position: absolute;
             top: 50%;
