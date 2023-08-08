@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <Provider store={store}>
             <ThemeProvider theme={theme}>
-                <BrowserRouter basename="/">
+                <BrowserRouter basename="/event-planner">
                     <GlobalStyle/>
                     <Suspense fallback={<Loader/>}>
                         <App />
