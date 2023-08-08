@@ -5,5 +5,6 @@ export const Box = styled(FormControl)`
     &.MuiFormControl-root {
         display: flex;
         position: static;
+        margin-bottom: 20px;
     }
 `
