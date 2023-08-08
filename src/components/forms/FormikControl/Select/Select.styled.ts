@@ -39,12 +39,14 @@ export const useStyles = makeStyles<{ theme: DefaultTheme }>()(
             borderRadius: '8px',
             backgroundColor: 'white',
             boxShadow: theme.shadow.main,
+            pointerEvents: 'auto',
         },
         "list": {
             margin: 0,
             padding: 0,
             listStyle: 'none',
             backgroundColor: 'white',
+            cursor: 'pointer',
 
             "& li:not(:last-child)": {
                 borderBottom: `1px solid ${theme.colors.grey}`,

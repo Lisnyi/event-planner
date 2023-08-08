@@ -20,7 +20,6 @@ export const Select: FC<Props> = ({id, label, name, options, ...rest}) => {
 	const theme = useTheme()
 	const { classes } = useStyles({"theme": theme});
 	const errorMessage = touched[name as keyof CreateEventFormValues] && errors[name as keyof CreateEventFormValues]
-	const error = touched[name as keyof CreateEventFormValues] && Boolean(errors[name as keyof CreateEventFormValues])
 	const [isListOpen, setIsListOpen] = useState(false)
 	
 	return (
@@ -32,7 +31,6 @@ export const Select: FC<Props> = ({id, label, name, options, ...rest}) => {
 				value={values[name as keyof CreateEventFormValues]}
 				onChange={handleChange}
 				onBlur={handleBlur}
-				error={error}
 				listboxOpen={isListOpen}
 				onListboxOpenChange={() => setIsListOpen(!isListOpen)}
 				slotProps={{listbox: { className: classes.list }, popper: { className: classes.popper }}}
