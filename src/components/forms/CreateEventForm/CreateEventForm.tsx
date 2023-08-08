@@ -4,7 +4,7 @@ import { Formik, FormikHelpers } from "formik"
 import { priority, categories } from "../../../db"
 import { useAddNewEventMutation } from "../../../redux"
 import { FormikControl, createEventState, createEventSchema } from ".."
-import { CustomForm } from "./CreateEventForm.styled"
+import { CustomForm, Wrapper } from "./CreateEventForm.styled"
 import { CustomButton } from "../.."
 
 import type { CreateEventFormValues } from "../../../types"
@@ -48,54 +48,56 @@ export const CreateEventForm = () => {
             validateOnChange={true}>
                 {() => (
                     <CustomForm autoComplete='on'>
-                        <FormikControl
-                            name='title'
-                            label='Title'
-                            id={titleId}
-                        />
-                        <FormikControl
-                            control="textarea"
-                            name='description'
-                            label='Description'
-                            id={descriptionId}
-                        />
-                        <FormikControl
-                            control="date"
-                            name='date'
-                            label='Select date'
-                            id={dateId}
-                        />
-                        <FormikControl
-                            control="time"
-                            name='time'
-                            label='Select time'
-                            id={timeId}
-                        />
-                        <FormikControl
-                            name='location'
-                            label='Location'
-                            id={locationId}
-                        />
-                        <FormikControl
-                            control="select"
-                            name='category'
-                            label='Category'
-                            options={categories}
-                            id={categoryId}
-                        />
-                        <FormikControl
-                            disabled
-                            name='picture'
-                            label='Add picture'
-                            id={pictureId}
-                        />
-                        <FormikControl
-                            control="select"
-                            name='priority'
-                            label='Priority'
-                            options={priority}
-                            id={priorityId}
-                        />
+                        <Wrapper>
+                            <FormikControl
+                                name='title'
+                                label='Title'
+                                id={titleId}
+                            />
+                            <FormikControl
+                                control="textarea"
+                                name='description'
+                                label='Description'
+                                id={descriptionId}
+                            />
+                            <FormikControl
+                                control="date"
+                                name='date'
+                                label='Select date'
+                                id={dateId}
+                            />
+                            <FormikControl
+                                control="time"
+                                name='time'
+                                label='Select time'
+                                id={timeId}
+                            />
+                            <FormikControl
+                                name='location'
+                                label='Location'
+                                id={locationId}
+                            />
+                            <FormikControl
+                                control="select"
+                                name='category'
+                                label='Category'
+                                options={categories}
+                                id={categoryId}
+                            />
+                            <FormikControl
+                                disabled
+                                name='picture'
+                                label='Add picture'
+                                id={pictureId}
+                            />
+                            <FormikControl
+                                control="select"
+                                name='priority'
+                                label='Priority'
+                                options={priority}
+                                id={priorityId}
+                            />
+                        </Wrapper>
                         <CustomButton type='submit' content="Add event"/>
                     </CustomForm>
                 )}

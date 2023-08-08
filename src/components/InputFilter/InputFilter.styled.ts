@@ -30,7 +30,7 @@ export const Filter = styled.input`
        width: 368px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1440px) {
        width: 410px;
     }
 `

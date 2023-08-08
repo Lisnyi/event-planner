@@ -18,4 +18,10 @@ export const Button = styled(CustomButton)<{secondary: boolean}>`
         color: ${p => p.secondary && p.theme.colors.accentBlue};
         background-color: ${p => p.secondary && 'white'};
     }
+
+    @media (min-width: 768px) {
+        width: fit-content;
+        margin-right: ${p => p.secondary && '16px'};
+        margin-left: 0;
+    }
 `

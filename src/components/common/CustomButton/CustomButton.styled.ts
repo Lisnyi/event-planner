@@ -18,4 +18,9 @@ export const Button = styled.button`
     &:hover, &:focus {
         background-color: ${p => p.theme.colors.accentBlue};
     }
+
+    @media (min-width: 768px) {
+        width: 193px;
+        margin-left: auto;
+    }
 `

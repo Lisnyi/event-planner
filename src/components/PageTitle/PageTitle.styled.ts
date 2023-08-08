@@ -10,10 +10,6 @@ export const Title = styled.h2<{homePage: boolean | undefined}>`
     @media (min-width: 768px) {
         display: block;
         font-size: ${p => p.theme.fontSizes.large};
-        margin-bottom: ${p => p.homePage ? 0 : '40px'};
-    }
-
-    @media (min-width: 1440px) {
         margin-bottom: ${p => p.homePage ? 0 : '24px'};
     }
 `

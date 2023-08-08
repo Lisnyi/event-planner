@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { useParams } from 'react-router-dom'
-import { Container, Section, GoBackButton, PageTitle, EventInfoCard } from '../components'
+import { Container, Section, GoBackButton, PageTitle, EventInfoPageBox } from '../components'
 import { useGetEventByIdQuery } from '../redux'
 
 const EventInfoPage: FC = () => {
@@ -12,10 +12,7 @@ const EventInfoPage: FC = () => {
         <Container>
             <Section>
                 <GoBackButton/>
-                {data && <>
-                            <PageTitle content={data.title}/>
-                            <EventInfoCard event={data}/>
-                        </>}
+                {data && <EventInfoPageBox event={data}/>}
                 {isError && <PageTitle content='Oops, something went wrong'/>}
             </Section>
         </Container>
