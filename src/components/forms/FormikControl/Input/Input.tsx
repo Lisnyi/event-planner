@@ -8,9 +8,10 @@ type Props = {
 	id: string,
 	name: string,
 	label: string,
+	disabled?: boolean
 }
 
-export const Input: FC<Props> = ({id, name, label, ...rest}) => {
+export const Input: FC<Props> = ({id, name, label, disabled, ...rest}) => {
 
 	const { values, errors, touched, handleChange, handleBlur } = useFormikContext<CreateEventFormValues>();
 
@@ -31,6 +32,7 @@ export const Input: FC<Props> = ({id, name, label, ...rest}) => {
 				endAdornment={values[name as keyof CreateEventFormValues] && <ClearButton handleClick={clearField}/>}
 				disableUnderline
 				fullWidth
+				disabled={disabled}
 				id={id}
 				name={name}
 				value={values[name as keyof CreateEventFormValues]}
