@@ -49,7 +49,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     input,
-    div {
+    div,
+    section,
+    ul {
         box-sizing: border-box;
     }
 `
