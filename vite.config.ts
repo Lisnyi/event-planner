@@ -4,7 +4,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/event-planner/",
   plugins: [react(), svgr()],
   build: {
     chunkSizeWarningLimit: 1600,
