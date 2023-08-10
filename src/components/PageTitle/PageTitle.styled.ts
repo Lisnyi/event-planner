@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Title = styled.h2<{homePage: boolean | undefined}>`
+export const Title = styled.h1<{homePage: boolean | undefined}>`
     display: ${p => p.homePage && 'none'};
     font-family: 'PoppinsSemiBold', sans-serif;
     font-size: ${p => p.theme.fontSizes.semiLarge};
