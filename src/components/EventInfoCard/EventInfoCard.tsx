@@ -38,7 +38,7 @@ export const EventInfoCard: FC<Props> = ({event}) => {
     return (
         <Card>
             <CardImageBox>
-                <CardImage src={picture ? picture : WideDefaultImage} alt='Event image'/>
+                <CardImage src={picture ? picture : WideDefaultImage} width='100%' height='100%' alt='Event image'/>
             </CardImageBox>
             <CardDescriptionBox>
                 <CardDescription>
