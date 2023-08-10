@@ -24,6 +24,7 @@ export const EventInfoCard: FC<Props> = ({event}) => {
     function goToEditEventPage() {
         navigate(`/edit-event/${id}`)
     }
+    
     function handleDelete() {
         try{
             deleteEvent(id)

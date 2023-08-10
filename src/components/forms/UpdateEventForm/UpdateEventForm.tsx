@@ -53,7 +53,7 @@ export const UpdateEventForm: FC<Props> = ({event}) => {
             priority
         }
         updateEvent({id: event.id, event: newEvent})
-        navigate("/")
+        navigate(`/event-info/${event.id}`)
         resetForm()
     }
  
