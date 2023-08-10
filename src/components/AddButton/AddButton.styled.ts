@@ -10,6 +10,7 @@ export const Button = styled.button`
     border: none;
     border-radius: 8px;
     background-color: ${p => p.theme.colors.blue};
+    cursor: pointer;
 
     &:hover {
         background-color: ${p => p.theme.colors.accentBlue};

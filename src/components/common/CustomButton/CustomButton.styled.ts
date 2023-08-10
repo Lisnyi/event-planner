@@ -14,6 +14,7 @@ export const Button = styled.button`
     color: white;
     font-family: 'PoppinsMedium', sans-serif;
     font-size: ${p => p.theme.fontSizes.medium};
+    cursor: pointer;
 
     &:hover, &:focus {
         background-color: ${p => p.theme.colors.accentBlue};
