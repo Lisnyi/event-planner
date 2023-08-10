@@ -36,7 +36,7 @@ export const EventCard: FC<Props> = ({event}) => {
         <Card onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <ImageBox isHover={isHover}>
                 <CardChipsStack category={category} priority={priority}/>
-                <EventImage src={picture ? picture : DefaultImage} width='100%' height='100%' alt='Event image'/>
+                <EventImage src={picture ? picture : DefaultImage} loading='lazy' width='100%' height='100%' alt='Event image'/>
                 <EventInfo>
                     <p>
                         {dateFormat} at {timeFormat}
