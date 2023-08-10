@@ -5,6 +5,7 @@ import { EventInfoButton, Tag, PriorityTag } from '..'
 import { Card, CardImageBox, CardImage, CardDescriptionBox, CardDescription, TagsBox, ButtonsBox } from './EventInfoCard.styled'
 import { WideDefaultImage } from '../../assets'
 import { useDeleteEventMutation } from '../../redux'
+import { notify } from '../../utils'
 import type { Event } from '../../types'
 
 type Props = {
@@ -24,12 +25,13 @@ export const EventInfoCard: FC<Props> = ({event}) => {
     function goToEditEventPage() {
         navigate(`/edit-event/${id}`)
     }
-    
+
     function handleDelete() {
         try{
             deleteEvent(id)
             .unwrap()
             .then(()=> navigate(`/`))
+            notify('Successfully deleted')
         }
         catch(e){
             console.log(e)

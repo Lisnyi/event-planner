@@ -8,6 +8,7 @@ import { useUpdateEventMutation } from "../../../redux"
 import { FormikControl, updateEventSchema } from ".."
 import { CustomForm, Wrapper } from "./updateEventForm.styled"
 import { CustomButton } from "../.."
+import { notify } from "../../../utils"
 import type { Event, CreateEventFormValues, UpdateEventFormValues } from "../../../types"
 
 type Props = {
@@ -53,6 +54,7 @@ export const UpdateEventForm: FC<Props> = ({event}) => {
             priority
         }
         updateEvent({id: event.id, event: newEvent})
+        notify('Successfully updated')
         navigate(`/event-info/${event.id}`)
         resetForm()
     }

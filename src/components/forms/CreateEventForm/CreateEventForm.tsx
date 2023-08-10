@@ -4,6 +4,7 @@ import { Formik, FormikHelpers } from "formik"
 import { priority, categories } from "../../../db"
 import { useAddNewEventMutation } from "../../../redux"
 import { FormikControl, createEventState, createEventSchema } from ".."
+import { notify } from "../../../utils"
 import { CustomForm, Wrapper } from "./CreateEventForm.styled"
 import { CustomButton } from "../.."
 
@@ -36,6 +37,7 @@ export const CreateEventForm = () => {
             priority
         }
         addNewEvent(event)
+        notify('Successfully created')
         resetForm()
     }
  
