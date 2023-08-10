@@ -23,7 +23,7 @@ export const Select: FC<Props> = ({id, label, name, options, ...rest}) => {
 	const [isListOpen, setIsListOpen] = useState(false)
 	
 	return (
-		<FormControlBox>
+		<FormControlBox area={name}>
 			<Label htmlFor={id} label={label}/>
 			<SelectButton
 				id={id}

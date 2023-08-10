@@ -21,7 +21,7 @@ export const FormDatePicker: FC<Props> = ({id, name, label, ...rest}) => {
     
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <FormControlBox>
+            <FormControlBox area={name}>
                 <Label htmlFor={id} label={label}/>
                 <DatePicker
                     value={values[name as keyof CreateEventFormValues]}

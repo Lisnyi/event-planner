@@ -25,7 +25,7 @@ export const TextArea: FC<Props> = ({id, name, label, ...rest}) => {
 	}
 
 	return (
-		<FormControlBox>
+		<FormControlBox area={name}>
 			<Label htmlFor={id} label={label}/>
 			<CustomTextArea
 				endAdornment={values[name as keyof CreateEventFormValues] && <ClearButton handleClick={clearField}/>}
