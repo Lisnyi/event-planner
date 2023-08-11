@@ -6,30 +6,35 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "PoppinsLight";
         src: local("PoppinsLight"),
             url(${PoppinsLight}) format("truetype");
+        font-display: swap;
     }
 
     @font-face {
         font-family: "PoppinsMedium";
         src: local("PoppinsMedium"),
             url(${PoppinsMedium}) format("truetype");
+        font-display: swap;
     }
 
     @font-face {
         font-family: "PoppinsSemiBold";
         src: local("PoppinsSemiBold"),
             url(${PoppinsSemiBold}) format("truetype");
+        font-display: swap;
     }
 
     @font-face {
         font-family: "PoppinsRegular";
         src: local("PoppinsRegular"),
             url(${PoppinsRegular}) format("truetype");
+        font-display: swap;
     }
 
     @font-face {
         font-family: "AlataRegular";
         src: local("AlataRegular"),
             url(${AlataRegular}) format("truetype");
+        font-display: swap;
     }
 
     body {
