@@ -1,6 +1,6 @@
 import BackGround from './bg.jpg'
-import DefaultImage from './default.png'
-import WideDefaultImage from './default-wide.png'
+import DefaultImage from './default.jpg'
+import WideDefaultImage from './default-wide.jpg'
 
 export {
     BackGround,
