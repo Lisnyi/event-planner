@@ -1,0 +1,1 @@
+import{bp as o}from"./index-58b5aa06.js";const r=e=>o.success(e,{position:"top-right",autoClose:5e3,hideProgressBar:!1,closeOnClick:!0,pauseOnHover:!0,draggable:!0,progress:void 0,theme:"light"});export{r as n};
