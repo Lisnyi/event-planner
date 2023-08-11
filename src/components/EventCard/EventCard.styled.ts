@@ -42,7 +42,7 @@ export const DescriptionBox = styled.div`
     padding: 16px;
 `
 
-export const DescriptionTitle = styled.h3`
+export const DescriptionTitle = styled.h2`
     margin-bottom: 16px;
     font-family: 'PoppinsMedium', sans-serif;
     font-size: ${p => p.theme.fontSizes.medium};
