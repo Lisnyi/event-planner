@@ -33,17 +33,17 @@ export const SelectButton: FC<Props> = ({title, icon, options}) => {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
                 endIcon={icon}
-                name={title}
+                aria-label={title}
             >
                 {open && title} 
             </OpenButton>
             <List
-                id="basic-menu"
+                id={title}
                 anchorEl={anchorEl}
                 open={open}
                 onClose={handleClose}
                 MenuListProps={{
-                    'aria-labelledby': 'basic-button',
+                    'aria-labelledby': `${title}`,
                 }}
             >   {options.map(({value, arrow}, index) =>
                     <MenuItem
