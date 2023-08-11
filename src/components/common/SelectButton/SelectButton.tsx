@@ -26,13 +26,14 @@ export const SelectButton: FC<Props> = ({title, icon, options}) => {
   return (
         <div>
             <OpenButton
-            id="basic-button"
-            open={open}
-            aria-controls={open ? 'basic-menu' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-            onClick={handleClick}
-            endIcon={icon}
+                id={title}
+                open={open}
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}
+                endIcon={icon}
+                name={title}
             >
                 {open && title} 
             </OpenButton>
