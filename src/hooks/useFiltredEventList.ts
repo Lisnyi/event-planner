@@ -1,11 +1,11 @@
-import { useSelector } from "react-redux"
-import { useGetEventsQuery, getFilter } from '../redux'
+import { useGetEventsQuery } from '../redux'
+import { useFilter } from "."
 import { normalizeText } from "../utils"
 
 export function useFiltredEventList () {
 
     const { data } = useGetEventsQuery()
-    const filter = useSelector(getFilter)
+    const [filter] = useFilter()
     
     const filtredList = data?.filter(({title, description}) => {
         const normalizedTitle = normalizeText(title)
