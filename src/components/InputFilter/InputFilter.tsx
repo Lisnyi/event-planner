@@ -1,26 +1,29 @@
-import { FC, useState, ChangeEvent } from 'react'
+import { FC, FormEvent } from 'react'
 import { ClearButton } from '..'
 import { Search } from '../../assets'
 import { Filter, FilterBox, SearchIcon } from "./InputFilter.styled"
 
-export const InputFilter: FC = () => {
+type Props = {
+    value: string,
+    handleChange: (value: string) => void
+}
 
-    const [filter, setFilter] = useState('')
-    
-    function handleChange(e: ChangeEvent<HTMLInputElement>) {
-        setFilter(e.target.value)
+export const InputFilter: FC<Props> = ({value, handleChange}) => {
+
+    function onChange ({currentTarget}: FormEvent<HTMLInputElement>) {
+        handleChange(currentTarget.value)
     }
 
     return (
         <FilterBox>
             <SearchIcon component={Search} />
             <Filter
-                value={filter}
-                onChange={handleChange}
+                value={value}
+                onChange={onChange}
                 placeholder='Search by keywords'
                 aria-label='Search by keywords'
             />
-            {filter && <ClearButton handleClick={()=>setFilter('')}/>}
+            {value && <ClearButton handleClick={() => handleChange('')}/>}
         </FilterBox>
     )
 }

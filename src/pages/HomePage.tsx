@@ -1,16 +1,16 @@
 import { FC } from 'react'
 import { Container, Section, MainEventsList, HomePageBox} from '../components'
-import { useGetEventsQuery } from '../redux'
+import { useFiltredEventList } from '../hooks'
 
 const HomePage: FC = () => {
 
-    const { data } = useGetEventsQuery()
+    const [ list ] = useFiltredEventList()
 
     return (
         <Container>
             <Section>
                 <HomePageBox/>
-                {data && <MainEventsList list={data}/>}
+                {list && <MainEventsList list={list}/>}
             </Section>
         </Container>
     )
