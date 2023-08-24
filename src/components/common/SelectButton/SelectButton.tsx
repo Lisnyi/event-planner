@@ -2,25 +2,27 @@ import { FC, useState, ReactNode } from 'react'
 import { MenuItem } from '@mui/material';
 import { OpenButton, List } from './SelectButton.styled';
 import { SortArrowDown, SortArrowUp } from '../../../assets';
-import type { SelectOptions } from '../../../types';
+import type { SelectOptions, Category } from '../../../types';
 
 type Props = {
     title: string,
     icon: ReactNode,
-    options: SelectOptions
+    options: SelectOptions,
+    handleSelect: (value: Category) => void
 }
 
-export const SelectButton: FC<Props> = ({title, icon, options}) => {
+export const SelectButton: FC<Props> = ({title, icon, options, handleSelect}) => {
 
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-      setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget);
     };
 
-    const handleClose = () => {
-      setAnchorEl(null);
+    const handleClose = (value: Category) => {
+        handleSelect(value)
+        setAnchorEl(null);
     };
 
   return (
@@ -48,7 +50,7 @@ export const SelectButton: FC<Props> = ({title, icon, options}) => {
             >   {options.map(({value, arrow}, index) =>
                     <MenuItem
                         key={index}
-                        onClick={handleClose}
+                        onClick={() => handleClose(value)}
                     >
                         {value}
                         {arrow && (arrow === 'up' ? <SortArrowUp/> : <SortArrowDown/>)}

@@ -1,14 +1,19 @@
 import { useSelector, useDispatch } from "react-redux"
-import { getFilter, setFilter } from "../redux"
+import { getFilter, setInputFilter, setCategoryFilter } from "../redux"
+import type { FilterType, Category } from "../types"
 
-export function useFilter(): [string, (value:string) => void] {
+export function useFilter(): [FilterType, (value: string) => void, (value: Category | '') => void] {
 
-    const value: string = useSelector(getFilter)
+    const value: FilterType = useSelector(getFilter)
     const dispatch = useDispatch()
 
-    function handleChange (value: string) {
-        dispatch(setFilter(value))
+    function handleInputFilterChange (value: string) {
+        dispatch(setInputFilter(value))
     }
 
-    return [ value, handleChange ]
+    function handleCategoryFilterChange (value: Category | '') {
+        dispatch(setCategoryFilter(value))
+    }
+
+    return [ value, handleInputFilterChange, handleCategoryFilterChange ]
 }

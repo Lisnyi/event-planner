@@ -3,10 +3,9 @@ import { MainTitle, InputFilter, LanguageSelect } from '..'
 import { useFilter } from '../../hooks'
 import { HeaderBox, HeaderSection, TitleBox, InputBox } from "./Header.styled"
 
-
 export const Header: FC = () => {
 
-    const [ value, handleChange ] = useFilter()
+    const [ {input}, handleInputFilterChange ] = useFilter()
 
     return (
         <HeaderBox>
@@ -16,7 +15,7 @@ export const Header: FC = () => {
                     <LanguageSelect/>
                 </TitleBox>
                 <InputBox>
-                    <InputFilter value={value} handleChange={handleChange}/>
+                    <InputFilter value={input} handleChange={handleInputFilterChange}/>
                 </InputBox>
             </HeaderSection>
         </HeaderBox>
