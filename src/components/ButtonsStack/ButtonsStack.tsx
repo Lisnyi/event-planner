@@ -25,7 +25,7 @@ export const ButtonsStack: FC = () => {
 	return (
 		<Box>
 			<SelectButton icon={<Filter/>} handleSelect={selectCategoryFilter} title='Category' options={categories}/>
-			<SelectButton icon={<Sort/>} title='Sort by' options={sortOptions}/>
+			<SelectButton icon={<Sort/>} handleSelect={(a) => console.log(a)} title='Sort by' options={sortOptions}/>
 			<AddButton handleClick={goToCreateEventPage}/>
 		</Box>
 	)
