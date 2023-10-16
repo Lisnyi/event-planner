@@ -1,0 +1,1 @@
+import{j as o}from"./index-47eb697a.js";import{C as t,S as s,P as e}from"./PageTitle-ba90115b.js";import{G as n}from"./GoBackButton-07b9b01a.js";const m=()=>o.jsx(t,{children:o.jsxs(s,{children:[o.jsx(n,{}),o.jsx(e,{content:"Page Not Found"})]})});export{m as default};

@@ -1,0 +1,1 @@
+const e=[{label:"Art",value:"Art"},{label:"Music",value:"Music"},{label:"Business",value:"Business"},{label:"Conference",value:"Conference"},{label:"Workshop",value:"Workshop"},{label:"Party",value:"Party"},{label:"Sport",value:"Sport"}];export{e as c};
