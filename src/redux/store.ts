@@ -1,11 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { eventsApi, filterReducer, filterSlice } from "./index"
+import { eventsApi, filterReducer, filterSlice, sortReducer, sortSlice } from "./index"
+
+const rootReducer = {
+	[eventsApi.reducerPath]: eventsApi.reducer,
+	[filterSlice.name]: filterReducer,
+	[sortSlice.name]: sortReducer,
+}
 
 export const store = configureStore({
-    reducer: {
-        [eventsApi.reducerPath]: eventsApi.reducer,
-		[filterSlice.name]: filterReducer,
-    },
+    reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
 			thunk: {

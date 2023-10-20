@@ -7,9 +7,11 @@ import {
     setDoc,
     getDoc,
     getDocs,
-    deleteDoc
+    deleteDoc,
+    orderBy
 } from 'firebase/firestore';
 import { firestore } from '../../db';
+import { RootState } from '..';
 import { Event, NewEvent } from '../../types';
 
 type EventsArray = Array<Event>
@@ -19,9 +21,11 @@ export const eventsApi = createApi({
     tagTypes: ['Events'],
     endpoints: (builder) => ({
         getEvents: builder.query<EventsArray, void>({
-            async queryFn() {
+            async queryFn(_arg, {getState}) {
                 try {
-                    const ref = query(collection(firestore, 'events'));
+                    const state = getState() as RootState
+                    const {field, direction} = state.sort
+                    const ref = query(collection(firestore, 'events'), orderBy(field, direction));
                     const querySnapshot = await getDocs(ref);
                     const eventsList: EventsArray = [];
                     querySnapshot?.forEach((doc) => {
